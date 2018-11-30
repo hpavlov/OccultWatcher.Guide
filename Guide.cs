@@ -22,6 +22,10 @@ namespace OccultWatcher.Guide
         public const string OWGuideCouldNotFindPath = "OWGuide.couldNotFindPath";
 
         private readonly int START_GUIDE = 1;
+        private readonly int CHANGE_LANGUAGE = 2;
+
+        bool isEnglish = false;
+        bool isGerman = false;
 
         private IOWHost m_HostInfo = null;
         private IOWResourceProvider m_ResourceProvider = null;
@@ -30,11 +34,42 @@ namespace OccultWatcher.Guide
 
         internal string GetResourceString(string resourceName, string defaultValue)
         {
+            string resourceValue = null;
+            if (isEnglish)
+                resourceValue = defaultValue;
+            else if (isGerman)
+                resourceValue = GetGermanResource(resourceName);
+
+            if (resourceValue != null)
+            {
+                return resourceValue;
+            }
+
             if (m_ResourceProvider == null)
                 // Backwards compatibility with older versions of OW
                 return defaultValue;
             else
                 return m_ResourceProvider.GetResourceString(resourceName, defaultValue);
+        }
+
+        private string GetGermanResource(string resourceId)
+        {
+            if (resourceId == OWGuideAddinName)
+                return "OW Guide Add-in";
+            if (resourceId == OWGuideStartGuide)
+                return "Zeige Ereignis in Guide an";
+            if (resourceId == OWGuideConfigTitle)
+                return "OW Guide Add-in Konfiguration";
+            if (resourceId == OWGuideBrowse)
+                return "Durchsuchen ...";
+            if (resourceId == OWGuideOptional)
+                return "Optional: Name einer Guide-Konfiguration (genau 8 Buchstaben lang)";
+            if (resourceId == OWGuideGuidePath)
+                return "Hier den Dateipfad von 'Guide' angeben.";
+            if (resourceId == OWGuideCouldNotFindPath)
+                return "Pfad '{0}' konnte nicht gefunden werden.";
+
+            return null;
         }
 
         void IOWAddin.InitializeAddin(IOWHost hostInfo)
@@ -45,7 +80,10 @@ namespace OccultWatcher.Guide
             ADDIN_ACTIONS = new OWAddinAction[]
             {
                 new OWAddinAction(START_GUIDE, GetResourceString(OWGuideStartGuide, "Show Event in Guide"), OWAddinActionType.SelectedEventAction, Properties.Resources.Details.ToBitmap()),
+                new OWAddinAction(CHANGE_LANGUAGE, "Language Change", OWAddinActionType.EventReceiver, null),
             };
+
+            SetLanguage(m_HostInfo.CurrentLanguage);
         }
 
         void IOWAddin.FinalizeAddin()
@@ -134,6 +172,29 @@ namespace OccultWatcher.Guide
                         System.Diagnostics.Process.Start(startInfo);                        
                     }
                 }
+            }
+            if (actionId == CHANGE_LANGUAGE)
+            {
+                if (eventArgs.OWEventId == OWEventArguments.EVT_CURR_LANGUAGE_CHANGED)
+                {
+                    SetLanguage((int) eventArgs.Args);
+                }
+            }
+        }
+
+        private void SetLanguage(int langId)
+        {
+            isEnglish = false;
+            isGerman = false;
+
+            switch (langId)
+            {
+                case 1:
+                    isEnglish = true;
+                    break;
+                case 3:
+                    isGerman = true;
+                    break;
             }
         }
     }

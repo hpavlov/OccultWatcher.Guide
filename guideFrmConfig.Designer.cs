@@ -28,6 +28,7 @@ namespace OccultWatcher.Guide
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(guideFrmConfig));
             this.lblGuidePath = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
@@ -37,7 +38,7 @@ namespace OccultWatcher.Guide
             this.tbxGuideConfig = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // lblInfoFormat
+            // lblGuidePath
             // 
             this.lblGuidePath.Location = new System.Drawing.Point(12, 9);
             this.lblGuidePath.Name = "lblGuidePath";
@@ -81,7 +82,6 @@ namespace OccultWatcher.Guide
             this.tbxPathToGuide.Name = "tbxPathToGuide";
             this.tbxPathToGuide.Size = new System.Drawing.Size(268, 20);
             this.tbxPathToGuide.TabIndex = 1;
-            this.tbxPathToGuide.Text = "Path to Guide";
             // 
             // lblOptional
             // 
@@ -110,7 +110,11 @@ namespace OccultWatcher.Guide
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblGuidePath);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "guideFrmConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "OW Guide Plugin Configuration";
