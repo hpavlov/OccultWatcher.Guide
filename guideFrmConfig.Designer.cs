@@ -36,20 +36,22 @@ namespace OccultWatcher.Guide
             this.tbxPathToGuide = new System.Windows.Forms.TextBox();
             this.lblOptional = new System.Windows.Forms.Label();
             this.tbxGuideConfig = new System.Windows.Forms.TextBox();
+            this.cbxAlwaysInNewInstance = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblGuidePath
             // 
+            this.lblGuidePath.AutoSize = true;
             this.lblGuidePath.Location = new System.Drawing.Point(12, 9);
             this.lblGuidePath.Name = "lblGuidePath";
-            this.lblGuidePath.Size = new System.Drawing.Size(415, 21);
+            this.lblGuidePath.Size = new System.Drawing.Size(259, 13);
             this.lblGuidePath.TabIndex = 0;
-            this.lblGuidePath.Text = "Set the path to \"Guide\" on your computer .";
+            this.lblGuidePath.Text = "Set the path to \'Guide\'\'s executable on your computer";
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(335, 140);
+            this.btnCancel.Location = new System.Drawing.Point(334, 178);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
@@ -58,7 +60,7 @@ namespace OccultWatcher.Guide
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(254, 140);
+            this.btnOK.Location = new System.Drawing.Point(253, 178);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 5;
@@ -85,9 +87,10 @@ namespace OccultWatcher.Guide
             // 
             // lblOptional
             // 
+            this.lblOptional.AutoSize = true;
             this.lblOptional.Location = new System.Drawing.Point(14, 71);
             this.lblOptional.Name = "lblOptional";
-            this.lblOptional.Size = new System.Drawing.Size(320, 21);
+            this.lblOptional.Size = new System.Drawing.Size(314, 13);
             this.lblOptional.TabIndex = 6;
             this.lblOptional.Text = "Optional: Add name of Guide- configuration (exactly 8 characters)";
             // 
@@ -98,11 +101,22 @@ namespace OccultWatcher.Guide
             this.tbxGuideConfig.Size = new System.Drawing.Size(209, 20);
             this.tbxGuideConfig.TabIndex = 7;
             // 
+            // cbxAlwaysInNewInstance
+            // 
+            this.cbxAlwaysInNewInstance.AutoSize = true;
+            this.cbxAlwaysInNewInstance.Location = new System.Drawing.Point(17, 143);
+            this.cbxAlwaysInNewInstance.Name = "cbxAlwaysInNewInstance";
+            this.cbxAlwaysInNewInstance.Size = new System.Drawing.Size(216, 17);
+            this.cbxAlwaysInNewInstance.TabIndex = 8;
+            this.cbxAlwaysInNewInstance.Text = "Open events in a new instance of Guide";
+            this.cbxAlwaysInNewInstance.UseVisualStyleBackColor = true;
+            // 
             // guideFrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 175);
+            this.ClientSize = new System.Drawing.Size(442, 213);
+            this.Controls.Add(this.cbxAlwaysInNewInstance);
             this.Controls.Add(this.tbxGuideConfig);
             this.Controls.Add(this.lblOptional);
             this.Controls.Add(this.tbxPathToGuide);
@@ -133,5 +147,6 @@ namespace OccultWatcher.Guide
         private System.Windows.Forms.TextBox tbxPathToGuide;
         private System.Windows.Forms.Label lblOptional;
         private System.Windows.Forms.TextBox tbxGuideConfig;
+        private System.Windows.Forms.CheckBox cbxAlwaysInNewInstance;
     }
 }

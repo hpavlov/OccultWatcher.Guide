@@ -8,6 +8,8 @@ using System.Drawing;
 using OccultWatcher.SDK;
 using System.IO.Compression;
 using System.Configuration;
+using System.Diagnostics;
+using OccultWatcher.Guide.Properties;
 
 namespace OccultWatcher.Guide
 {
@@ -19,6 +21,7 @@ namespace OccultWatcher.Guide
         public const string OWGuideBrowse = "OWGuide.btnBrowse";
         public const string OWGuideOptional = "OWGuide.lblOptional";
         public const string OWGuideGuidePath = "OWGuide.lblGuidePath";
+        public const string OWGuideAlwaysInNewInstance = "OWGuide.cbxAlwaysInNewInstance";
         public const string OWGuideCouldNotFindPath = "OWGuide.couldNotFindPath";
 
         private readonly int START_GUIDE = 1;
@@ -29,6 +32,7 @@ namespace OccultWatcher.Guide
 
         private IOWHost m_HostInfo = null;
         private IOWResourceProvider m_ResourceProvider = null;
+        private Process m_CurrentGuideProcess = null;
 
         public OWAddinAction[] ADDIN_ACTIONS  = null;
 
@@ -160,8 +164,23 @@ namespace OccultWatcher.Guide
                             guideOptions = string.Concat("-m", Settings.Default.GuideConfiguration, ".mar ", "-t", date, " -o", coord);
                         }
 
+                        if (!Settings.Default.AlwaysNewInstance)
+                        {
+                            if (m_CurrentGuideProcess != null &&
+                                !m_CurrentGuideProcess.HasExited)
+                            {
+                                try
+                                {
+                                    m_CurrentGuideProcess.Kill();
+                                }
+                                catch (Exception ex)
+                                {
+                                    Trace.WriteLine(ex.ToString());
+                                }
+                            }
+                        }
 
-                        System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
                         startInfo.UseShellExecute = false;
                         startInfo.WorkingDirectory = Path.GetDirectoryName(Settings.Default.GuidePath);
                         startInfo.FileName = Settings.Default.GuidePath;
@@ -169,7 +188,7 @@ namespace OccultWatcher.Guide
                         startInfo.Arguments = guideOptions;
                         startInfo.ErrorDialog = true;
 
-                        System.Diagnostics.Process.Start(startInfo);                        
+                        m_CurrentGuideProcess = Process.Start(startInfo);                        
                     }
                 }
             }

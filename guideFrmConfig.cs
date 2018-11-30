@@ -1,6 +1,8 @@
 using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using OccultWatcher.Guide.Properties;
 
 namespace OccultWatcher.Guide
 {
@@ -16,6 +18,7 @@ namespace OccultWatcher.Guide
 
             tbxPathToGuide.Text = Settings.Default.GuidePath;
             tbxGuideConfig.Text = Settings.Default.GuideConfiguration;
+            cbxAlwaysInNewInstance.Checked = Settings.Default.AlwaysNewInstance;
         }
 
 
@@ -25,12 +28,22 @@ namespace OccultWatcher.Guide
             btnCancel.Text = m_ParentAddin.GetResourceString("Cancel", "Cancel");
             Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideConfigTitle, "OW Guide Add-in Configuration");
             btnOpenFileDialog.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideBrowse, "Browse ...");
-            lblOptional.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideOptional, "Optional: Add name of Guide- configuration (exactly 8 characters)");
-            lblGuidePath.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideGuidePath, "Set the path to 'Guide' on your computer .");
+            lblOptional.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideOptional, "Optional: Add name of Guide configuration (exactly 8 characters)");
+            lblGuidePath.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideGuidePath, "Set the path to Guide's executable on your computer");
+            cbxAlwaysInNewInstance.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideAlwaysInNewInstance, "Open events in a new instance of Guide");
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if (Directory.Exists(tbxPathToGuide.Text))
+            {
+                var guideExe = Directory.GetFiles(tbxPathToGuide.Text, "guide?.exe").SingleOrDefault();
+                if (guideExe != null)
+                {
+                    tbxPathToGuide.Text += guideExe;
+                }
+            }
+
             if (!File.Exists(tbxPathToGuide.Text))
             {
                 MessageBox.Show(this, 
@@ -45,6 +58,7 @@ namespace OccultWatcher.Guide
 
             Settings.Default.GuidePath = tbxPathToGuide.Text;
             Settings.Default.GuideConfiguration = tbxGuideConfig.Text;
+            Settings.Default.AlwaysNewInstance = cbxAlwaysInNewInstance.Checked;
             Settings.Default.Save();
 
             Close();

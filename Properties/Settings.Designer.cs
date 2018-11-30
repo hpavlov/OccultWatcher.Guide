@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OccultWatcher.Guide {
+namespace OccultWatcher.Guide.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -44,6 +44,18 @@ namespace OccultWatcher.Guide {
             }
             set {
                 this["GuideConfiguration"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AlwaysNewInstance {
+            get {
+                return ((bool)(this["AlwaysNewInstance"]));
+            }
+            set {
+                this["AlwaysNewInstance"] = value;
             }
         }
     }
