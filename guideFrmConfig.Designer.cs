@@ -28,23 +28,22 @@ namespace OccultWatcher.Guide
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblInfoFormat = new System.Windows.Forms.Label();
+            this.lblGuidePath = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnOpenFileDialog = new System.Windows.Forms.Button();
             this.tbxPathToGuide = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblOptional = new System.Windows.Forms.Label();
+            this.tbxGuideConfig = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblInfoFormat
             // 
-            this.lblInfoFormat.Location = new System.Drawing.Point(12, 9);
-            this.lblInfoFormat.Name = "lblInfoFormat";
-            this.lblInfoFormat.Size = new System.Drawing.Size(415, 21);
-            this.lblInfoFormat.TabIndex = 0;
-            this.lblInfoFormat.Text = "Set the path to \"Guide\" on your computer .";
+            this.lblGuidePath.Location = new System.Drawing.Point(12, 9);
+            this.lblGuidePath.Name = "lblGuidePath";
+            this.lblGuidePath.Size = new System.Drawing.Size(415, 21);
+            this.lblGuidePath.TabIndex = 0;
+            this.lblGuidePath.Text = "Set the path to \"Guide\" on your computer .";
             // 
             // btnCancel
             // 
@@ -55,7 +54,6 @@ namespace OccultWatcher.Guide
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -84,45 +82,39 @@ namespace OccultWatcher.Guide
             this.tbxPathToGuide.Size = new System.Drawing.Size(268, 20);
             this.tbxPathToGuide.TabIndex = 1;
             this.tbxPathToGuide.Text = "Path to Guide";
-            this.tbxPathToGuide.TextChanged += new System.EventHandler(this.tbxPathToGuide_TextChanged);
             // 
-            // openFileDialog1
+            // lblOptional
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.lblOptional.Location = new System.Drawing.Point(14, 71);
+            this.lblOptional.Name = "lblOptional";
+            this.lblOptional.Size = new System.Drawing.Size(320, 21);
+            this.lblOptional.TabIndex = 6;
+            this.lblOptional.Text = "Optional: Add name of Guide- configuration (exactly 8 characters)";
             // 
-            // label1
+            // tbxGuideConfig
             // 
-            this.label1.Location = new System.Drawing.Point(14, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Optional: Add name of Guide- configuration (exactly 8 characters)";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbxGuideConfig.Location = new System.Drawing.Point(15, 98);
+            this.tbxGuideConfig.Name = "tbxGuideConfig";
+            this.tbxGuideConfig.Size = new System.Drawing.Size(209, 20);
+            this.tbxGuideConfig.TabIndex = 7;
             // 
             // guideFrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 175);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbxGuideConfig);
+            this.Controls.Add(this.lblOptional);
             this.Controls.Add(this.tbxPathToGuide);
             this.Controls.Add(this.btnOpenFileDialog);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblInfoFormat);
+            this.Controls.Add(this.lblGuidePath);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "guideFrmConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "OW Guide Plugin Configuration";
+            this.Load += new System.EventHandler(this.guideFrmConfig_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,13 +122,12 @@ namespace OccultWatcher.Guide
 
         #endregion
 
-        private System.Windows.Forms.Label lblInfoFormat;
+        private System.Windows.Forms.Label lblGuidePath;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnOpenFileDialog;
         private System.Windows.Forms.TextBox tbxPathToGuide;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblOptional;
+        private System.Windows.Forms.TextBox tbxGuideConfig;
     }
 }
