@@ -1,0 +1,776 @@
+0332
+# 32769  !load.bmp         Load Mark
+# 32770  !save.bmp         Save Mark
+# 32771  !delete.bmp       Delete Mark
+#  9700  !go_obna.bmp      Go to initial setup
+#  9701  !go_obna.bmp      Load factory defaults
+# 57607 g!print.bmp        Print
+#f 2019  !go_obna.bmp      Go to by object name
+#f   22  !go_Mess.bmp      Go to a Messier object
+#f 2476  !go_Mess.bmp      Alternative "go to Messier"
+#f   23  !go_NGC.bmp       Go to an NGC object
+#f   24  !go_IC.BMP        Go to IC
+     31  !go_Hori.bmp      Go to a horizon point
+#f 2120  !go_sat.bmp       Go to Satellite
+ f   29  !go_plan.bmp      Go to Planet
+#f 2200  !sun.bmp          Go to the Sun
+#f 2201  !merc.bmp         Go to Mercury
+#f 2202  !venu.bmp         Go to Venus
+#f 2210  !moon.bmp         Go to the Moon
+#f 2203  !03.bmp           Go to Earth
+#f 2204  !mars.bmp         Go to Mars
+#f 2205  !jupi.bmp         Go to Jupiter
+#f 2206  !satu.bmp         Go to Saturn
+#f 2207  !uran.bmp         Go to Uranus
+#f 2208  !nept.bmp         Go to Neptune
+#f 2209  !pluo.bmp         Go to Pluto
+#f 2211  !go_io.bmp        Go to Io
+#f 2212  !go_eur.bmp       Go to Europa
+#f 2213  !go_gan.bmp       Go to Ganymede
+#f 2214  !go_cal.bmp       Go to Callisto
+#f 2215  !go_mi.bmp        Go to Mimas
+#f 2216  !go_enc.bmp       Go to Enceladus
+#f   28  !go_comet.bmp     Go to a Comet
+ f   30  !go_aster.BMP     Go to an Asteroid
+#f   41  !go_beyer.bmp     Go to Star... Bayer/Flamsteed
+#f   42  !go_BSC.bmp       Go to Yale BSC star
+#f   43  !go_SAO.bmp       Go to SAO star
+#f   44  !go_PPM.bmp       Go to PPM star
+#f   45  !go_HD.bmp        Go to HD star
+#f   46  !go_GSC.bmp       Go to GSC star
+#f   47  !go_Name.bmp      Go to Common Name
+#f   48  !go_var.bmp       Go to a variable star
+#f   49  !go_NSV.bmp       Go to NSV star
+#f   50  !go_doub.bmp      Go to Dbl Star
+#f   51  !go_SN.bmp        Go to Supernova
+#f   52  !go_DM.bmp        Go to Durchmusterung star
+#f   53  !go_HIP.bmp       Go to Hipparcos star
+#f   54  !go_near.bmp      Go to Nearby star
+#f   80  !go_sh.bmp        Go to Sharpless nebula
+#f   81  !go_lbn.bmp       Go to Lynds Bright nebula
+#f   82  !go_PK.bmp        Go to PK nebula
+#f   83  !go_vdb.bmp       Go to van den Bergh nebula
+#f   84  !go_drk.bmp       Go to Barnard nebula
+#f   85  !go_nena.bmp      Go to Common name nebula
+#f   86  !go_ABPN.bmp      Go to Abell nebula
+#f   26  !go_open.bmp      Go to Open cluster
+#f   27  !go_glob.bmp      Go to Globular cluster
+#f   25  !go_con.bmp       Go to Constellation
+#f   61  !go_pgc.bmp       Go to PGC galaxy
+#f   62  !go_UGC.bmp       Go to Uppsala galaxy
+#f   63  !go_MGC.bmp       Go to MGC galaxy
+#f   64  !go_ESO.bmp       Go to ESO/Uppsala galaxy
+#f   65  !go_CGCG.bmp      Go to CGCG galaxy
+#f   66  !go_gxmr.bmp      Go to Markarian galaxy
+#f   67  !go_ABGX.bmp      Go to Abell galaxy cluster
+#f   68  !go_gxzw.bmp      Go to Zwicky galaxy cluster
+#f   69  !go_GXnam.bmp     Go to Common name galaxy
+#f   70  !go_HIK.bmp       Go to Hickson galaxy
+#f   71  !go_ARP.bmp       Go to Arp galaxy
+#m   21  !go_coRA.bmp      Enter RA/dec coords
+#  2793  !11.bmp           Label satellites by name
+#  2794  !12.bmp           Label satellites by NORAD
+#  2795  !13.bmp           Label satellites by COSPAR
+#m 2029  !go_coec.bmp      Enter Ecliptic coords
+#m 2030  !go_coga.bmp      Enter Galactic coords
+#m 2551  !go_coga.bmp      Enter Supergalactic coords
+#m 2007  !go_coal.bmp      Enter Alt/Az coords
+#m 2017  !go_opp.bmp       Go to Opposition point
+#f 2508  !go_tdf.bmp       Go to .TDF object
+#f 2904  !go_tdf.bmp       Go to .TDF obj, prev selection
+#m 2183 g!sw_arrog.bmp     Pan down & left
+#m 2184 g!s_arrog.bmp      Pan down
+#m 2185 g!se_arrog.bmp     Pan down & right
+#m 2186 g!w_arrog.bmp      Pan left
+#m 2188 g!e_arrog.bmp      Pan right
+#m 2189 g!nw_arrog.bmp     Pan up & left
+#m 2190 g!n_arrog.bmp      Pan up
+#m 2191 g!ne_arrog.bmp     Pan up & right
+#  2156  !set_loc.bmp      Set Location dialog
+ t  105 g!set_time.bmp     Time menu
+#t 2412 g!10.bmp           Time zone
+#t 2423  !11.bmp           Time format/calendar
+#t 2424  !12.bmp           Secondary time format/calendar
+#t 2790  !13.bmp           Secondary Time zone
+#t 2016  !set_000.bmp      Set 0:00 UT
+ t 2006  !set_syst.bmp     Set to current time
+#t 2552  !01.bmp           Increase by one millennium
+#t 2553  !02.bmp           Decrease by one millennium
+#t 2554  !03.bmp           Increase by one century
+#t 2555  !04.bmp           Decrease by one century
+#t 2556  !05.bmp           Increase by one decade
+#t 2557  !06.bmp           Decrease by one decade
+#t 2558  !07.bmp           Increase by one year
+#t 2559  !08.bmp           Decrease by one year
+#t 2560  !09.bmp           Increase by one month
+#t 2561  !10.bmp           Decrease by one month
+#t 2562  !11.bmp           Increase by ten days
+#t 2563  !12.bmp           Decrease by ten days
+#t 2564  !13.bmp           Increase by one day
+#t 2565  !14.bmp           Decrease by one day
+#t 2566  !15.bmp           Increase by ten hours
+#t 2567  !16.bmp           Decrease by ten hours
+#t 2568  !17.bmp           Increase by one hour
+#t 2569  !18.bmp           Decrease by one hour
+#t 2570  !19.bmp           Increase by ten minutes
+#t 2571  !20.bmp           Decrease by ten minutes
+#t 2572  !21.bmp           Increase by one minute
+#t 2573  !22.bmp           Decrease by one minute
+#t 2574  !23.bmp           Increase by ten seconds
+#t 2575  !24.bmp           Decrease by ten seconds
+#t 2576  !25.bmp           Increase by one second
+#t 2577  !26.bmp           Decrease by one second
+#t 2578  !27.bmp           Increase by .1 second
+#t 2579  !28.bmp           Decrease by .1 second
+#t 2588  !rd_year.bmp      First of year
+#t 2589  !rd_month.bmp     First of month
+#t 2590  !rd_day.bmp       Round off day
+#t 2591  !32.bmp           Round off hour
+#t 2592  !rd_min.bmp       Round off minute
+#t 2593  !rd_sec.bmp       Round off second
+#z  107 g!set_lv.bmp       Set level size
+#s  108  !set_scop.bmp     Scope control
+#s 2010  !slewguid.bmp     Slew Guide
+#s 2011  !slewtel.bmp      Slew telescope
+#z   19 g!set_zoom.bmp     Set zoom level
+ z 2134  !set_Z.bmp        'Full horizon' view
+#z 2271 g!04.bmp           Zoom out four levels
+ z 2026 g!set_mi.bmp       Zoom out one level
+ z 2025 g!set_pl.bmp       Zoom in one level
+ z 2380 g!set_01.bmp       Go to Level 1
+#z 2381 g!set_02.bmp       Go to Level 2
+#z 2382 g!set_03.bmp       Go to Level 3
+ z 2383 g!set_04.bmp       Go to Level 4
+#z 2384 g!set_05.bmp       Go to Level 5
+#z 2385 g!set_06.bmp       Go to Level 6
+ z 2386 g!set_07.bmp       Go to Level 7
+#z 2387 g!set_08.bmp       Go to Level 8
+#z 2388 g!set_09.bmp       Go to Level 9
+ z 2389 g!set_10.bmp       Go to Level 10
+#z 2390 g!set_11.bmp       Go to Level 11
+#z 2391 g!set_12.bmp       Go to Level 12
+#z 2392 g!set_13.bmp       Go to Level 13
+#z 2393 g!set_14.bmp       Go to Level 14
+#z 2394 g!set_15.bmp       Go to Level 15
+#z 2395 g!set_16.bmp       Go to Level 16
+#z 2396 g!set_17.bmp       Go to Level 17
+#z 2397 g!set_18.bmp       Go to Level 18
+#z 2398 g!set_19.bmp       Go to Level 19
+#z 2399 g!set_20.bmp       Go to Level 20
+#l 2091 g!ENGLISH.BMP      English
+#l 2021 g!GERMAN.BMP       German
+#l 2028 g!FRENCH.BMP       French
+#l 2034 g!SPANISH.BMP      Spanish
+#l 2033 g!ITALIAN.BMP      Italian
+#l 2092 g!JAPANESE.BMP     Japanese
+#l 2093 g!DUTCH.BMP        Dutch
+#l 2094 g!RUSSIAN.BMP      Russian
+#l 2162 g!czech.bmp        Czech
+#l 2163 g!chinese.BMP      Chinese
+#l 2173 g!Polish.bmp       Polish
+#l 2165 g!hungaria.bmp     Hungarian
+#l 2169 g!danish.bmp       Danish
+#  2022 g!set_PM.bmp       Margins menu
+#  2509  !raform.bmp       RA/Dec fmt
+#  2118  !tle.bmp          Set .TLE file name
+#p 2083 g!09.bmp           Set Simple projection
+#p 2084 g!10.bmp           Set Ortho projection
+#p 2085 g!11.bmp           Set Gnomonic projection
+#p 2086 g!12.bmp           Set Stereo projection
+#p 2087 g!13.bmp           Set Equidist projection
+#p 2088 g!14.bmp           Set Sinusoidal projection
+#p 2089 g!15.bmp           Set Mercator projection
+#p 2430 g!16.bmp           Set Mollweide projection
+#p 2431 g!16.bmp           Set Hammer-Aitoff projection
+#p 2432 g!17.bmp           Set Miller projection
+#p 2433 g!18.bmp           Set Peters projection
+#p 2434 g!19.bmp           Set Simple Conic projection
+#p 2435 g!20.bmp           Set Conformal conic projection
+#p 2436 g!21.bmp           Set Equiarea conic projection
+#p 2437 g!22.bmp           Set Polyconic projection
+#p 2438 g!23.bmp           Set Bonne projection
+#p 2439 g!24.bmp           Set Winkel-Tripel projection
+#   140  !set_star.bmp     Star display dialogue
+#   141  !minus.bmp        Dim stars
+#   142  !plus.bmp         Brighten stars
+   2020  !data.bmp         Data shown
+#g  143 g!border.bmp       Border on/off
+#L  144 g!legend.bmp       Legend
+#c  145  !set_ccd.bmp      CCD Frame
+#g 2464  !telrad.bmp       Toggle Telrad
+#g 2475  !17.bmp           Toggle aperture
+#i 2018  !togz2cel.bmp     Toggle zenith/north at top
+#i 2147  !01.bmp           Uninverted chart
+#i 2148  !02.bmp           Inverted chart
+#i 2149  !03.bmp           Chart inverted E/W
+#i 2150  !04.bmp           Chart inverted N/S
+#i 2547  !14.bmp           invert chart completely
+#i 2548  !15.bmp           invert chart E/W
+#i 2549  !16.bmp           invert N/S
+#i  146  !set_inv.bmp      Inversion dialog
+#g  148 g!set_meas.bmp     Ticks,  grids...
+#g 2114 g!set_cen.bmp      Toggle center crosshair
+#g 2467  !02.bmp           Toggle umbra/penumbra
+#  2505 g!set_scre.bmp     Screen fonts
+#  2506 g!set_prid.bmp     Printer fonts
+#  2055 g!direct.bmp       Direct to screen
+#   147 g!focussto.bmp     Toggle red mode
+#  2137  !set_bac.bmp      Background
+#  2095  !set_iso.bmp      Toggle Isophotes
+#  2598  !set_iso.bmp      Milky Way display
+#  2599  !set_iso.bmp      Nebula outline display
+#  2999  !set_redr.bmp     Force a redraw
+ a 2503  !animatio.bmp     Animation dialog
+#a  186  !realtime.bmp     Real time animation
+#a 2453  !w_arrow.bmp      Animation step backward
+#a 2452  !e_arrow.bmp      Animation step forward
+#a 2455  !02.bmp           Start animation backward
+#a 2454  !01.bmp           Start animation forward
+#a 2456  !03.bmp           Stop animation
+#a  189  !add_tra.bmp      Add a Trail
+#a  191  !idx_tra.bmp      No Index marks
+#a  188  !del_tra.bmp      Clear Trails
+#a  190  !ephemeri.bmp     Make ephemeris
+#a 2135  !seleephe.bmp     Ephem items
+#o    1  !set_over.bmp     Select current overlay
+#o    4  !set_osw.bmp      Toggle overlays
+#o    5  !set_oplu.bmp     Create new overlay
+#o    6  !set_los.bmp      Delete an overlay
+#    11  !set_pri.bmp      User object menu
+#  2507  !set_prin.bmp     Go to next user object
+#T 2058  !moonrise.bmp     Table of lunar rise/set, libration
+#T 2059  !mo_phase.bmp     Table of lunar phases
+#T 2060  !16.bmp           Table of lunar apogee/perigee
+#T 2061  !17.bmp           Table of lunar eclipses
+#T 2301  !18.bmp           Table of solar eclipses
+#T 2062  !setcomet.bmp     Table of current comets
+#T 2063  !setaster.bmp     Table of current asteroids
+#T 2064  !ju_event.bmp     Table of Jupiter events
+#T 2065  !ju_redsp.bmp     Table of GRS transits
+#T 2008  !star_tab.bmp     Table of stars
+#T 2362  !24.bmp           Miscellaneous tables
+#I 2161  !rs.bmp           RealSky image
+#I 2119  !dss.bmp          DSS image
+#i 2905  !04.bmp           Find UCAC-4 files
+#i 2378  !web_gsc.bmp      GSC 2.2 data via Internet
+#i 2410  !web_dss.bmp      Grab DSS image via Internet
+#i 2800  !web_a20.bmp      A2.0 data via Internet
+ i 2801  !web_u3.bmp       UCAC-3 data via Internet
+#i 2802  !25.bmp           PPMXL data via Internet
+#i 2803  !26.bmp           WISE data via Internet
+#i 2550  !22.bmp           UCAC-2 data via Internet
+#i 2457  !10.bmp           B1.0 data via Internet
+#i 2458  !02.bmp           2MASS data via Internet
+#i 2791  !14.bmp           CMC-14 data via Internet
+#  2413  !a10.bmp          Get A1.0 data from CD-ROM
+#  2414  !a10.bmp          Get A2.0 data from CD-ROM
+#  2415  !24.bmp           Clear Ax.0 data
+#I 2355  !charon.bmp       Link to Charon
+#I 2071  !rs_tmp.bmp       Toggle RS images
+#I 2053  !rs_name.bmp      RealSky renamer
+#I 2049  !rs_del.bmp       Clear RealSky images
+#I 2401  !n_arro2.bmp      Increase brightness
+#I 2402  !s_arro2.bmp      Decrease brightness
+#I 2403  !e_arro2.bmp      Increase contrast
+#I 2404  !w_arro2.bmp      Decrease contrast
+#  2009  !editcom.bmp      Add/Edit a Comet
+#  2052  !mpc.bmp          Add MPC comets/asteroids
+#t 2037 g!enter_t.bmp      Enter Time by keyboard
+#t 2596  !enter_t.bmp      Enter Time using second time zone
+#z 2027 g!fix.bmp          Fixed zoom levels on/off
+#  2051  !line_var.bmp     Line of variation
+#  2502  !tog_usr.bmp      Toggle user datasets
+#  2902  !tog_usr.bmp      Toggle prev user dataset
+#  2903  !tog_usr.bmp      Control prev user dataset
+#  2023  !div_ps.bmp       Create PostScript file
+#  2056 g!bmp.bmp          Make .BMP File
+#  2416  !21.bmp           Make .AVI File
+#O 2139  !conj.bmp         Conjunction finding
+#O 2140 g!set_sofi.bmp     Show eclipse
+#  2001 g!glos.bmp         Glossary
+#  2002 g!hot.bmp          Hotkeys
+#  2003 g!set_qi.bmp       Quick Info
+#  2004 g!about.bmp        About Guide
+#  2367  !spin_r.bmp       Spin screen right
+#  2368  !spin_l.bmp       Spin screen left
+#s 2369  !focus_in.bmp     Focus in (LX200)
+#s 2370  !focussto.bmp     Stop focus (LX200)
+#s 2371  !focusout.bmp     Focus out (LX200)
+#s 2372  !focusfas.bmp     Focus fast (LX200)
+#s 2373  !focusslo.bmp     Focus slow (LX200)
+#s 2422  !lx200tim.bmp     Set LX-200 time
+#s 2706  !lx200_ll.bmp     Set LX-200 lat/lon
+#s 2708  !lx200inf.bmp     Get LX-200 info
+#  2374  !addframe.bmp     Add a 'movie frame' .BMP
+#O 2406 G!24.bmp           Ellipses on eclipse charts
+#O 2407 G!25.bmp           Show starts of eclipses
+#O 2408 G!26.bmp           Show ends of eclipses
+#O 2409 G!27.bmp           Show midpoints of eclipses
+#O 2144 G!local.bmp        Local eclipses only
+#O 2145 G!part.bmp         Include partial eclipses
+#O 2143 G!set_sone.bmp     Next eclipse
+#O 2142 G!set_ecla.bmp     Previous eclipse
+#  2997 g!28.bmp           Full-screen mode
+#m 2442  !n_arrow.bmp      Show northern horizon
+#m 2443  !nw_arrow.bmp     Show northeast horizon
+#m 2444  !e_arrow.bmp      Show eastern horizon
+#m 2445  !se_arrow.bmp     Show southeast horizon
+#m 2446  !s_arrow.bmp      Show southern horizon
+#m 2447  !sw_arrow.bmp     Show southwest horizon
+#m 2448  !w_arrow.bmp      Show western horizon
+#m 2449  !nw_arrow.bmp     Show northwest horizon
+#m 2450  !01.bmp           Show zenith
+#m 2451  !02.bmp           Show nadir
+#s 2421  !scope_id.bmp     Toggle scope location indicator
+#  2542  !prev_map.bmp     Previous chart
+#  2545  !next_map.bmp     Forward
+#  2115  !pa_dist.bmp      Show dist/PA two last clicked objects
+#O 2440  !w_arrow.bmp      Prev conjunction
+#O 2441  !e_arrow.bmp      Next conjunction
+#   106  !25.bmp           Set home planet
+#i 2797  !nomad-1.bmp      Download NOMAD star data
+#i 2798  !gsc-1.bmp        Download GSC-2.3 data
+#i 2799  !sdss-1.bmp       Download SDSS Release 7 data
+#  2500  !26.bmp           Get NIST time
+#P 2786  !01.bmp           Toggle planet lat/lon readout
+#  2141 g!01.bmp           Toggle geographic mode
+#  2459  !non_star.bmp     Toggle GSC "non-stars"
+#c 2463  !20.bmp           Toggle CCD frame
+#c 2465  !19.bmp           Toggle pixels in CCD frame
+#c 2702  !01.bmp           Toggle CCD frame circles
+#c 2704  !02.bmp           Rotate CCD left
+#c 2705  !03.bmp           Rotate CCD right
+#I 2307  !27.bmp           Blink images
+#  2138 g!rescent.bmp      Recent changes
+#  2899  !go_obna.bmp      Display dialogue
+#  2896  !go_obna.bmp      Asteroid options
+#o    8  !set_olin.bmp     Add lines to overlay
+#o    9  !set_otex.bmp     Add text to overlay
+#o   10  !set_ocir.bmp     Add circles to overlay
+#o   12  !set_ocol.bmp     Select overlay color
+#i 2796  !quasar-1.bmp     Download Veron's 12th quasar data
+#l 2164 g!hebrew.bmp       Hebrew
+#l 2166 g!05.bmp           Norwegian
+#l 2167 g!06.bmp           Swedish
+#l 2168 g!FINNISH.BMP      Finnish
+#l 2170 g!08.bmp           Portuguese
+# 57608 g!preview.bmp      Print Preview
+# 57606 g!01.bmp           Print Setup
+# 57665 g!02.bmp           Exit
+#I 2035  !24.bmp           RealSky image
+#   101                    Enter longitude
+#   102                    Enter latitude
+#   103                    Enter altitude
+#  2309                    Cycle planet bitmap
+#  2310 G                  Go to country
+#  2311 G                  Go to city
+#  2096 g                  Swap palette mode
+#  2048                    Find asteroid
+#  2041 G                  Toggle position readout
+#   184                    Increase animation speed
+#   185                    Decrease animation speed
+#  2046                    Go to variable star
+#  2032 g                  Toggle test flag
+#  2308                    Change toolbar items
+#  2146                    Get LMA data
+#   122                    Toggle outlining of stars
+#   121                    Toggle colored stars
+#  2701                    Level size dialog
+#  2597                    Toggle refraction
+#  2005  !prev_mif.bmp     Show previous "more info"
+#a  182                    Toggle animation
+#a  181                    Enter animation rate
+#s 2132  !set_scop.bmp     Toggle scope control pad
+#  2181 g                  Toggle display of toolbar
+#  2000 g                  Main help screen
+#  2313                    Load next mark
+#  2180                    Hold magnitudes fixed
+#  2160                    Toggle topo/geocentric
+#  9999 g                  Force a redraw
+#c 2040                    Move CCD frame to mouse loc
+#  2126                    Set view offset from planet
+#  2127                    Reset view offset from planet
+#  2036                    Toggle chart mode
+#  2136                    Toggle "realistic" background
+#s 2501                    Set SkyComm baud rate
+#  2038                    Set user rotation
+#M 2039                    Set LX200 delay time
+#  2043                    Set printer rescale kludge
+#  2117                    Save a mark
+#g 2128 g!ecliptic.bmp     Toggle ecliptic display
+#g 2129                    Toggle horizon display
+#g 2130 g!eq_galac.bmp     Toggle galactic equator display
+#  2131                    Set limit for star mag text
+#  2182                    Toggle MPCORB/built-in asteroids
+#  2314                    Type in encoder system #
+#P 2315                    Toggle planet features
+#P 2316                    Make list of planet features
+#f 2317                    Go to a planet feature
+#D 2319                    Coordinate menu (DOS)
+#D 2320                    Center cursor (DOS)
+#D 2321                    language menu (DOS)
+#D 2322                    Shut down (DOS)
+#D 2323                    Change epoch (DOS)
+#D 2324                    Toggle GhostScript for printing (DOS)
+#D 2325                    Toggle constell abbr menus (DOS)
+#D 2326                    Load mark file (DOS)
+#D 2327                    Ephemeris items menu (DOS)
+#D 2328                    Projections menu (DOS)
+#D 2329                    Print (DOS)
+#D 2330                    Toggle previous chart (DOS)
+#D 2331                    Select video mode (DOS)
+#D 2332                    Dump memory debug data (DOS)
+#D 2333                    Full-screen cursor (DOS)
+#D 2334                    Cursor keys for mouse (DOS)
+#D 2335                    Toggle Telrad (DOS)
+#D 2336                    Add item to print queue (DOS)
+#D 2337                    Flush print queue (DOS)
+#D 2338                    Add alignment star (DOS)
+#D 2339                    Send SFIM data to mount (DOS)
+#D 2340                    Delete a mark (DOS)
+#D 2341                    Color menu (DOS)
+#D 2342                    Planet anim menu (DOS)
+#D 2343                    Back up one chart (DOS)
+#D 2344                    Printer setup (DOS)
+#D 2345                    Display menu (DOS)
+#D 2346                    File menu (DOS)
+#D 2347                    Go To menu (DOS)
+#D 2348                    Help menu (DOS)
+#D 2349                    Overlay menu (DOS)
+#D 2350                    Settings menu (DOS)
+#D 2351                    Toggle "frozen views" (DOS)
+#D 2352                    Extras menu (DOS)
+#D 2353                    Enter encoder value (DOS)
+#D 2354                    Tables menu (DOS)
+#D 2787                    Exit without prompting (DOS)
+#P 2400                    Solar eclipse
+#P 2318                    Planet options
+#  2357                    Enter location name
+#l 2358                    Native-language hotkeys
+#  2359                    Table of satellite passes
+#  2361                    Show previous 'help'
+#P 2364                    Increase planet feature details
+#P 2365                    Decrease planet feature details
+#P 2377                    Set most recent object as 'home'
+#f 2217  !03.bmp           Go to Tethys
+#f 2218  !04.bmp           Go to Dione
+#f 2219  !05.bmp           Go to Rhea
+#f 2220  !06.bmp           Go to Titan
+#f 2221  !07.bmp           Go to Hyperion
+#f 2222  !08.bmp           Go to Japetus
+#f 2223  !05.bmp           Go to Miranda
+#f 2224  !01.bmp           Go to Ariel
+#f 2225  !02.bmp           Go to Umbriel
+#f 2226  !03.bmp           Go to Titania
+#f 2227  !04.bmp           Go to Oberon
+#f 2228  !01.bmp           Go to Phobos
+#f 2229  !02.bmp           Go to Deimos
+#f 2230  !01.bmp           Go to Triton
+#f 2231  !01.bmp           Go to Charon
+#f 2232  !06.bmp           Go to Himalia (J6)
+#f 2233  !07.bmp           Go to Elara (J7)
+#f 2234  !08.bmp           Go to Pasiphae (J8)
+#f 2235  !09.bmp           Go to Sinope (J9)
+#f 2236  !10.bmp           Go to Lysithea (J10)
+#f 2237  !11.bmp           Go to Carme (J11)
+#f 2238  !12.bmp           Go to Ananke (J12)
+#f 2239  !13.bmp           Go to Leda (J13)
+#f 2240  !09.bmp           Go to Phoebe
+#f 2241  !16.bmp           Go to Caliban (U16)
+#f 2242  !18.bmp           Go to Sycorax (U17)
+#f 2243  !02.bmp           Go to Nereid (N2)
+#f 2244  !19.bmp           Go to Setebos (U19)
+#f 2245  !20.bmp           Go to Stephano (U20)
+#f 2246  !21.bmp           Go to Prospero (U21)
+#f 2247  !05.bmp           Go to Amalthea
+#f 2248  !14.bmp           Go to Thebe
+#f 2249  !15.bmp           Go to Adrastea
+#f 2600  !16.bmp           Go to Metis
+#f 2601  !15.bmp           Go to Atlas
+#f 2602  !16.bmp           Go to Prometheus
+#f 2603  !17.bmp           Go to Pandora
+#f 2604  !18.bmp           Go to Pan
+#f 2605  !06.bmp           Go to Cordelia
+#f 2606  !07.bmp           Go to Ophelia
+#f 2607  !08.bmp           Go to Bianca
+#f 2608  !09.bmp           Go to Cressida
+#f 2609  !10.bmp           Go to Desdemona
+#f 2610  !11.bmp           Go to Juliet
+#f 2611  !12.bmp           Go to Portia
+#f 2612  !13.bmp           Go to Rosalind
+#f 2613  !14.bmp           Go to Belinda
+#f 2614  !15.bmp           Go to Puck
+#f 2615  !16.bmp           Go to 1986U10
+#f 2616  !17.bmp           Go to Proteus
+#f 2617  !18.bmp           Go to Larissa
+#f 2618  !19.bmp           Go to Despina
+#f 2619  !20.bmp           Go to Galatea
+#f 2620  !21.bmp           Go to Thalassa
+#f 2621  !22.bmp           Go to Naiad
+#f 2622  !01.bmp           Go to S/1999 J 1
+#f 2623  !01.bmp           Go to S/2000 S 1
+#f 2624  !02.bmp           Go to S/2000 S 2
+#f 2625  !03.bmp           Go to S/2000 S 3
+#f 2626  !04.bmp           Go to S/2000 S 4
+#f 2627  !05.bmp           Go to S/2000 S 5
+#f 2628  !06.bmp           Go to S/2000 S 6
+#f 2629  !07.bmp           Go to S/2000 S 7
+#f 2630  !08.bmp           Go to S/2000 S 8
+#f 2631  !09.bmp           Go to S/2000 S 9
+#f 2632  !10.bmp           Go to S/2000 S 10
+#f 2633  !11.bmp           Go to S/2000 S 11
+#f 2634  !12.bmp           Go to S/2000 S 12
+#f 2635  !01.bmp           Go to S/2000 J 1
+#f 2636  !02.bmp           Go to S/2000 J 2
+#f 2637  !03.bmp           Go to S/2000 J 3
+#f 2638  !04.bmp           Go to S/2000 J 4
+#f 2639  !05.bmp           Go to S/2000 J 5
+#f 2640  !06.bmp           Go to S/2000 J 6
+#f 2641  !07.bmp           Go to S/2000 J 7
+#f 2642  !08.bmp           Go to S/2000 J 8
+#f 2643  !09.bmp           Go to S/2000 J 9
+#f 2644  !10.bmp           Go to S/2000 J 10
+#f 2645  !11.bmp           Go to S/2000 J 11
+#f 2646  !01.bmp           Go to S/2001 J 1
+#f 2647  !02.bmp           Go to S/2001 J 2
+#f 2648  !03.bmp           Go to S/2001 J 3
+#f 2649  !04.bmp           Go to S/2001 J 4
+#f 2650  !05.bmp           Go to S/2001 J 5
+#f 2651  !06.bmp           Go to S/2001 J 6
+#f 2652  !07.bmp           Go to S/2001 J 7
+#f 2653  !08.bmp           Go to S/2001 J 8
+#f 2654  !09.bmp           Go to S/2001 J 9
+#f 2655  !10.bmp           Go to S/2001 J 10
+#f 2656  !11.bmp           Go to S/2001 J 11
+#f 2657  !01.bmp           Go to S/2001 U 1
+#z 2250 g!25.bmp           Zoom out 25 levels
+#z 2251 g!24.bmp           Zoom out 24 levels
+#z 2252 g!23.bmp           Zoom out 23 levels
+#z 2253 g!22.bmp           Zoom out 22 levels
+#z 2254 g!21.bmp           Zoom out 21 levels
+#z 2255 g!20.bmp           Zoom out 20 levels
+#z 2256 g!19.bmp           Zoom out 19 levels
+#z 2257 g!18.bmp           Zoom out 18 levels
+#z 2258 g!17.bmp           Zoom out 17 levels
+#z 2259 g!16.bmp           Zoom out 16 levels
+#z 2260 g!15.bmp           Zoom out 15 levels
+#z 2261 g!14.bmp           Zoom out 14 levels
+#z 2262 g!13.bmp           Zoom out 13 levels
+#z 2263 g!12.bmp           Zoom out 12 levels
+#z 2264 g!11.bmp           Zoom out 11 levels
+#z 2265 g!10.bmp           Zoom out 10 levels
+#z 2266 g!09.bmp           Zoom out 09 levels
+#z 2267 g!08.bmp           Zoom out 08 levels
+#z 2268 g!07.bmp           Zoom out 07 levels
+#z 2269 g!06.bmp           Zoom out six levels
+#z 2270 g!05.bmp           Zoom out five levels
+#z 2271 g!04.bmp           Zoom out four levels
+#z 2272 g!03.bmp           Zoom out three levels
+#z 2273 g!02.bmp           Zoom out two levels
+#z 2274 g!01.bmp           Zoom out one level
+#z 2276 g!01.bmp           Zoom in one level
+#z 2277 g!02.bmp           Zoom in two levels
+#z 2278 g!03.bmp           Zoom in three levels
+#z 2279 g!04.bmp           Zoom in four levels
+#z 2280 g!05.bmp           Zoom in five levels
+#z 2281 g!06.bmp           Zoom in six levels
+#z 2282 g!07.bmp           Zoom in 07 levels
+#z 2283 g!08.bmp           Zoom in 08 levels
+#z 2284 g!09.bmp           Zoom in 09 levels
+#z 2285 g!10.bmp           Zoom in 10 levels
+#z 2286 g!11.bmp           Zoom in 11 levels
+#z 2287 g!12.bmp           Zoom in 12 levels
+#z 2288 g!13.bmp           Zoom in 13 levels
+#z 2289 g!14.bmp           Zoom in 14 levels
+#z 2290 g!15.bmp           Zoom in 15 levels
+#z 2291 g!16.bmp           Zoom in 16 levels
+#z 2292 g!17.bmp           Zoom in 17 levels
+#z 2293 g!18.bmp           Zoom in 18 levels
+#z 2294 g!19.bmp           Zoom in 19 levels
+#L 2510  !01.bmp           Toggle time in legend
+#L 2511  !02.bmp           Toggle lat/lon in legend
+#L 2512  !03.bmp           Toggle caption in legend
+#L 2513  !04.bmp           Toggle RA/dec in legend
+#L 2514  !05.bmp           Toggle field of view size in legend
+#L 2515  !06.bmp           Toggle object key in legend
+#L 2516  !07.bmp           Toggle star key in legend
+#L 2517  !08.bmp           Toggle N/E compass in legend
+#L 2518  !09.bmp           Toggle Sky Atlas 2000 page in legend
+#L 2519  !10.bmp           Toggle old Uranometria page in legend
+#L 2521  !12.bmp           Toggle alt/az in legend
+#L 2522  !13.bmp           Toggle ecliptic in legend
+#L 2523  !14.bmp           Toggle galactic in legend
+#L 2524  !15.bmp           Toggle sidereal time in legend
+#L 2525  !16.bmp           Toggle Millennium Atlas page in legend
+#L 2526  !17.bmp           Toggle time zone in legend
+#L 2527  !18.bmp           Toggle secondary time in legend
+#L 2528  !19.bmp           Toggle new Uranometria page in legend
+#L 2529  !20.bmp           Toggle supergalactic in legend
+#M 2710  !01.bmp           Automatic alignment
+#M 2711  !02.bmp           Set Land alignment
+#M 2712  !03.bmp           Set Polar alignment
+#M 2713  !04.bmp           Set Alt/Az alignment
+#M 2714  !05.bmp           Increase reticle brightness
+#M 2715  !06.bmp           Decrease reticle brightness
+#M 2716  !07.bmp           Reticle flash rate = 0
+#M 2717  !08.bmp           Reticle flash rate = 1
+#M 2718  !09.bmp           Reticle flash rate = 2
+#M 2719  !10.bmp           Reticle flash rate = 3
+#M 2720  !11.bmp           Reticle flash rate = 4
+#M 2721  !12.bmp           Reticle flash rate = 5
+#M 2722  !13.bmp           Reticle flash rate = 6
+#M 2723  !14.bmp           Reticle flash rate = 7
+#M 2724  !15.bmp           Reticle flash rate = 8
+#M 2725  !16.bmp           Reticle flash rate = 9
+#M 2726  !17.bmp           Turn on tube exhaust fan
+#M 2727  !18.bmp           Turn off tube exhaust fan
+#M 2728  !19.bmp           Turn on power to accessor panel
+#M 2729  !20.bmp           Turn off power to accessor panel
+#M 2730  !21.bmp           Get optical tube temp
+#M 2731  !22.bmp           Focus in fast
+#M 2732  !23.bmp           Focus in slow
+#M 2733  !focussto.bmp     Stop focuser
+#M 2734  !25.bmp           Focus out fast
+#M 2735  !26.bmp           Focus out slow
+#M 2736  !27.bmp           Focus speed 1
+#M 2737  !28.bmp           Focus speed 2
+#M 2738  !29.bmp           Focus speed 3
+#M 2739  !30.bmp           Focus speed 4
+#M 2740  !31.bmp           Turn on GPS
+#M 2741  !32.bmp           Turn off GPS
+#M 2742  !33.bmp           Initialize from GPS
+#M 2743  !34.bmp           Seek home & store posn
+#M 2744  !35.bmp           Seek home & realign
+#M 2745  !36.bmp           Sleep telescope
+#M 2746  !37.bmp           Wake up telescope
+#M 2747  !38.bmp           Slew to Park position
+#M 2748  !39.bmp           Restart scope
+#M 2749  !e_arrow.bmp      Slew to East
+#M 2750  !w_arrow.bmp      Slew to West
+#M 2751  !n_arrow.bmp      Slew to North
+#M 2752  !s_arrow.bmp      Slew to South
+#M 2753  !01.bmp           Halt slewing
+#M 2754  !02.bmp           Toggle to High-Precision mode
+#M 2755  !03.bmp           Turn on Field Derotator
+#M 2756  !04.bmp           Turn off Field Derotator
+#M 2757  !05.bmp           Slew rate
+#M 2758  !06.bmp           Find slew rate
+#M 2759  !07.bmp           Centering slew rate
+#M 2760  !08.bmp           Guiding slew rate
+#M 2761  !09.bmp           Toggle Smart Drive PEC on both axes
+#M 2762  !10.bmp           Turn Dec/Alt PEC on
+#M 2763  !11.bmp           Turn Dec/Alt PEC off
+#M 2764  !12.bmp           Turn RA/Azim PEC on
+#M 2765  !13.bmp           Turn RA/Azim PEC off
+#M 2766  !14.bmp           Get azimuth
+#M 2767  !15.bmp           Get sidereal time
+#M 2768  !16.bmp           Get tracking rate
+#M 2769  !17.bmp           Toggle high-precision mode
+END
+
+   Comments can be added freely to the end of this file.
+
+   The Italian-language version of this file is 'itoolbar.dat'.  There
+is also an 'ftoolbar.dat' for French,  'dtoolbar.dat' for German,  and
+so on.  'toolbar.dat' isn't translated into all languages (yet);  in
+such cases,  the English-language 'toolbar.dat' is used.
+
+   When you switch languages to (say) Italian,  Guide will use text from
+ITOOLBAR.DAT in the Toolbar dialog,  so that (for example) "Load Mark"
+will appear as "Vai al segnalibro".  The _only_ use Guide will make of
+the *TOOLBAR.DAT files is to perform this sort of translation; the
+bitmap names,  on/off states,  the number of bitmaps on the top line,
+and the order of buttons on the toolbar,  will all be ignored.
+Otherwise,  the toolbar itself might change when you switched
+languages,  and that could be pretty strange!
+
+   (One exception to this should be made:  some buttons contain text,
+which _should_ change from one language to the next.  I may allow for
+that possibility someday.)
+
+   The top line indicates the number of available toolbar buttons.
+Then a line is given for each button,  giving its "action number",
+the name of a bitmap,  and the text for the function.  The first
+character in each line is a '#' if the button is turned off,  a ' '
+if it's turned on.  Thus,  for example,  the first line indicates
+that action 32769 is given the bitmap LOAD.BMP,  and the text "Load
+Mark".  That text is shown in the Toolbar dialog,  and also as a
+tooltip on the application title bar when you leave the cursor
+over a toolbar item for a second or so.
+
+   The second character in each line is a "subgroup identifier".
+Right now,  the Toolbar dialog presents you with the whole long
+list of toolbar options,  which can be daunting.  I hope to be
+able to break that list into groups such as "scope control",
+"level resetting",  etc.  Thus far,  I've come up with the following
+subgroup identifiers:
+
+a Animation
+c CCD frame
+d Download data
+D DOS-only; these will never be used unless I decide to add a
+   toolbar to the DOS version,  which is _very_ unlikely!
+f Find Object
+i Inversion
+i Internet data downloading
+I Images
+L Legend-related
+M Meade-specific scope xtrol
+p Projections
+P Planet options
+z Field of view
+t Time
+l Language
+o Overlays
+O Eclipse/occultation
+s Scope control
+T Tables
+g Ticks, Grids, Markings
+(space)  Other
+
+   Note that some actions should appear in multiple groups.  But
+at least right now,  there is just one group per action.
+
+   When loading a toolbar button bitmap,  Guide will first look in
+the Guide directory.  So you could substitute your own LOAD.BMP
+(for example) there,  if you didn't like the one supplied by Guide.
+You could also change LOAD.BMP to MY_LOAD.BMP (for example) if you
+also didn't like the file name used by Guide.
+
+   The bitmaps are,  in general,  all the same size.  The small ones
+were chosen so that they would fit on the menu bar without expanding
+its height,  and the larger ones were chosen to be 32x32.  But this
+is not an absolute requirement.  You could make the larger ones 64x32
+(double width) with no trouble at all.  Make them 64x64,  and
+the toolbar will grow in height and consume part of the chart
+area... but no other ill effect will ensue.
+
+   You'll probably notice that there are many more toolbar buttons
+described than are actually used.  (As of 12 September 2000,  the top
+line of this file indicated 194 buttons,  even though 378 were listed.)
+The remaining buttons are not presently used,  either because I haven't
+gotten the functions involved to work yet,  or because they are somewhat
+trivial,  or because bitmaps don't exist for them yet.  In some cases,
+the functions only exist in DOS,  and the DOS software doesn't even have
+a toolbar (and probably never will).
+
+   Column 12 is usually blank.  If it contains a 'g',  the button in
+question is also shown in geographic mode (the eclipse/occulation/transit
+charts showing maps of the earth.)  If it contains a 'G',  the button
+is shown _only_ in geographic mode.  There are a few functions,  such
+as "show next eclipse" or "go to city",  that only make sense when
+you're looking at maps of the earth,  and therefore contain 'G'.
+And a few functions,  such as "zoom in" and "zoom out",  make sense
+for charts of both the earth and of the sky,  and therefore get a 'g'.
+
+   You can change the order of bitmap buttons freely.  By default,  they
+will appear on the toolbar in the same order they appear in this file;
+but if you moved,  say,  the "Quick Info" line to the second line in
+the file (just after the number of possible buttons),  then you could
+have that button shown first in the toolbar.
+
+   It's also possible,  within some limits,  to define your own action
+codes,  such as "set time to 1965 Feb 25 0:00" or "set location to
+N 44.37, W 69.54".  Those actions could then be accessed as hotkeys,
+and/or toolbar buttons,  and/or mouse clicks in the legend area.  See
+'actions.txt' and 'legend.dat' for details.

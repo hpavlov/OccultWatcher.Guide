@@ -61,7 +61,7 @@ namespace OccultWatcher.Guide
             if (resourceId == OWGuideAddinName)
                 return "OW Guide Add-in";
             if (resourceId == OWGuideStartGuide)
-                return "Zeige Ereignis in Guide an";
+                return "Zeige Ereignis in Guide";
             if (resourceId == OWGuideConfigTitle)
                 return "OW Guide Add-in Konfiguration";
             if (resourceId == OWGuideBrowse)
@@ -69,9 +69,11 @@ namespace OccultWatcher.Guide
             if (resourceId == OWGuideOptional)
                 return "Optional: Name einer Guide-Konfiguration (genau 8 Buchstaben lang)";
             if (resourceId == OWGuideGuidePath)
-                return "Hier den Dateipfad von 'Guide' angeben.";
+                return "Dateipfad angeben um Guide zu starten";
             if (resourceId == OWGuideCouldNotFindPath)
-                return "Pfad '{0}' konnte nicht gefunden werden.";
+                return "Pfad '{0}' konnte nicht gefunden werden";
+            if (resourceId == OWGuideAlwaysInNewInstance)
+                return "Ereignis in neuem Guide-Fenster öffnen";
 
             return null;
         }
@@ -157,11 +159,11 @@ namespace OccultWatcher.Guide
 
                         if (Settings.Default.GuideConfiguration == "")
                         {
-                            guideOptions = string.Concat("-t", date, " -o", coord);
+                            guideOptions = string.Concat("-t", date, " -o", coord, " -a2114");
                         }
                         else
                         {
-                            guideOptions = string.Concat("-m", Settings.Default.GuideConfiguration, ".mar ", "-t", date, " -o", coord);
+                            guideOptions = string.Concat("-m", Settings.Default.GuideConfiguration, ".mar ", "-t", date, " -o", coord, " -a2114");
                         }
 
                         if (!Settings.Default.AlwaysNewInstance)
