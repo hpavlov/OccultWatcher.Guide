@@ -23,6 +23,8 @@ namespace OccultWatcher.Guide
         public const string OWGuideGuidePath = "OWGuide.lblGuidePath";
         public const string OWGuideAlwaysInNewInstance = "OWGuide.cbxAlwaysInNewInstance";
         public const string OWGuideCouldNotFindPath = "OWGuide.couldNotFindPath";
+        public const string OWGuideAdditionalCommandLineArguments = "OWGuide.lblAdditionalArguments";
+        public const string OWGuideAddinCredits = "OWGuide.aboutMessage";
 
         private readonly int START_GUIDE = 1;
         private readonly int CHANGE_LANGUAGE = 2;
@@ -74,6 +76,8 @@ namespace OccultWatcher.Guide
                 return "Pfad '{0}' konnte nicht gefunden werden";
             if (resourceId == OWGuideAlwaysInNewInstance)
                 return "Ereignis in neuem Guide-Fenster öffnen";
+            if (resourceId == OWGuideAdditionalCommandLineArguments)
+                return "Optional: Zusätzliche Befehlszeilen-Argumente";
 
             return null;
         }
@@ -83,13 +87,13 @@ namespace OccultWatcher.Guide
             m_HostInfo = hostInfo;
             m_ResourceProvider = hostInfo as IOWResourceProvider;
 
+            SetLanguage(m_HostInfo.CurrentLanguage);
+
             ADDIN_ACTIONS = new OWAddinAction[]
             {
                 new OWAddinAction(START_GUIDE, GetResourceString(OWGuideStartGuide, "Show Event in Guide"), OWAddinActionType.SelectedEventAction, Properties.Resources.Details.ToBitmap()),
                 new OWAddinAction(CHANGE_LANGUAGE, "Language Change", OWAddinActionType.EventReceiver, null),
             };
-
-            SetLanguage(m_HostInfo.CurrentLanguage);
         }
 
         void IOWAddin.FinalizeAddin()
@@ -159,11 +163,11 @@ namespace OccultWatcher.Guide
 
                         if (Settings.Default.GuideConfiguration == "")
                         {
-                            guideOptions = string.Concat("-t", date, " -o", coord, " -a2114");
+                            guideOptions = string.Concat("-t", date, " -o", coord, " " + Settings.Default.CommandLineArguments);
                         }
                         else
                         {
-                            guideOptions = string.Concat("-m", Settings.Default.GuideConfiguration, ".mar ", "-t", date, " -o", coord, " -a2114");
+                            guideOptions = string.Concat("-m", Settings.Default.GuideConfiguration, ".mar ", "-t", date, " -o", coord, " " + Settings.Default.CommandLineArguments);
                         }
 
                         if (!Settings.Default.AlwaysNewInstance)

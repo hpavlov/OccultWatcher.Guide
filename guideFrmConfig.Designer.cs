@@ -37,6 +37,9 @@ namespace OccultWatcher.Guide
             this.lblOptional = new System.Windows.Forms.Label();
             this.tbxGuideConfig = new System.Windows.Forms.TextBox();
             this.cbxAlwaysInNewInstance = new System.Windows.Forms.CheckBox();
+            this.tbxAdditionalArguments = new System.Windows.Forms.TextBox();
+            this.lblAdditionalArguments = new System.Windows.Forms.Label();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblGuidePath
@@ -51,7 +54,7 @@ namespace OccultWatcher.Guide
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(334, 178);
+            this.btnCancel.Location = new System.Drawing.Point(334, 216);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
@@ -60,7 +63,7 @@ namespace OccultWatcher.Guide
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(253, 178);
+            this.btnOK.Location = new System.Drawing.Point(253, 216);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 5;
@@ -70,7 +73,7 @@ namespace OccultWatcher.Guide
             // 
             // btnOpenFileDialog
             // 
-            this.btnOpenFileDialog.Location = new System.Drawing.Point(289, 33);
+            this.btnOpenFileDialog.Location = new System.Drawing.Point(289, 24);
             this.btnOpenFileDialog.Name = "btnOpenFileDialog";
             this.btnOpenFileDialog.Size = new System.Drawing.Size(120, 26);
             this.btnOpenFileDialog.TabIndex = 2;
@@ -80,7 +83,7 @@ namespace OccultWatcher.Guide
             // 
             // tbxPathToGuide
             // 
-            this.tbxPathToGuide.Location = new System.Drawing.Point(15, 36);
+            this.tbxPathToGuide.Location = new System.Drawing.Point(15, 27);
             this.tbxPathToGuide.Name = "tbxPathToGuide";
             this.tbxPathToGuide.Size = new System.Drawing.Size(268, 20);
             this.tbxPathToGuide.TabIndex = 1;
@@ -88,7 +91,7 @@ namespace OccultWatcher.Guide
             // lblOptional
             // 
             this.lblOptional.AutoSize = true;
-            this.lblOptional.Location = new System.Drawing.Point(14, 71);
+            this.lblOptional.Location = new System.Drawing.Point(14, 66);
             this.lblOptional.Name = "lblOptional";
             this.lblOptional.Size = new System.Drawing.Size(314, 13);
             this.lblOptional.TabIndex = 6;
@@ -96,7 +99,7 @@ namespace OccultWatcher.Guide
             // 
             // tbxGuideConfig
             // 
-            this.tbxGuideConfig.Location = new System.Drawing.Point(15, 98);
+            this.tbxGuideConfig.Location = new System.Drawing.Point(15, 84);
             this.tbxGuideConfig.Name = "tbxGuideConfig";
             this.tbxGuideConfig.Size = new System.Drawing.Size(209, 20);
             this.tbxGuideConfig.TabIndex = 7;
@@ -104,18 +107,47 @@ namespace OccultWatcher.Guide
             // cbxAlwaysInNewInstance
             // 
             this.cbxAlwaysInNewInstance.AutoSize = true;
-            this.cbxAlwaysInNewInstance.Location = new System.Drawing.Point(17, 143);
+            this.cbxAlwaysInNewInstance.Location = new System.Drawing.Point(17, 179);
             this.cbxAlwaysInNewInstance.Name = "cbxAlwaysInNewInstance";
             this.cbxAlwaysInNewInstance.Size = new System.Drawing.Size(216, 17);
             this.cbxAlwaysInNewInstance.TabIndex = 8;
             this.cbxAlwaysInNewInstance.Text = "Open events in a new instance of Guide";
             this.cbxAlwaysInNewInstance.UseVisualStyleBackColor = true;
             // 
+            // tbxAdditionalArguments
+            // 
+            this.tbxAdditionalArguments.Location = new System.Drawing.Point(17, 144);
+            this.tbxAdditionalArguments.Name = "tbxAdditionalArguments";
+            this.tbxAdditionalArguments.Size = new System.Drawing.Size(209, 20);
+            this.tbxAdditionalArguments.TabIndex = 10;
+            // 
+            // lblAdditionalArguments
+            // 
+            this.lblAdditionalArguments.AutoSize = true;
+            this.lblAdditionalArguments.Location = new System.Drawing.Point(16, 127);
+            this.lblAdditionalArguments.Name = "lblAdditionalArguments";
+            this.lblAdditionalArguments.Size = new System.Drawing.Size(218, 13);
+            this.lblAdditionalArguments.TabIndex = 9;
+            this.lblAdditionalArguments.Text = "Optional: Additional command line arguments";
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.Location = new System.Drawing.Point(15, 216);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(75, 23);
+            this.btnAbout.TabIndex = 11;
+            this.btnAbout.Text = "About";
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
             // guideFrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 213);
+            this.ClientSize = new System.Drawing.Size(431, 251);
+            this.Controls.Add(this.btnAbout);
+            this.Controls.Add(this.tbxAdditionalArguments);
+            this.Controls.Add(this.lblAdditionalArguments);
             this.Controls.Add(this.cbxAlwaysInNewInstance);
             this.Controls.Add(this.tbxGuideConfig);
             this.Controls.Add(this.lblOptional);
@@ -148,5 +180,8 @@ namespace OccultWatcher.Guide
         private System.Windows.Forms.Label lblOptional;
         private System.Windows.Forms.TextBox tbxGuideConfig;
         private System.Windows.Forms.CheckBox cbxAlwaysInNewInstance;
+        private System.Windows.Forms.TextBox tbxAdditionalArguments;
+        private System.Windows.Forms.Label lblAdditionalArguments;
+        private System.Windows.Forms.Button btnAbout;
     }
 }

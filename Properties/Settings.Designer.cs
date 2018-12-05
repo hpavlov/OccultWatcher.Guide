@@ -58,5 +58,17 @@ namespace OccultWatcher.Guide.Properties {
                 this["AlwaysNewInstance"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CommandLineArguments {
+            get {
+                return ((string)(this["CommandLineArguments"]));
+            }
+            set {
+                this["CommandLineArguments"] = value;
+            }
+        }
     }
 }

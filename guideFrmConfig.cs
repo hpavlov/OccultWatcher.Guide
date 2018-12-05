@@ -18,6 +18,7 @@ namespace OccultWatcher.Guide
 
             tbxPathToGuide.Text = Settings.Default.GuidePath;
             tbxGuideConfig.Text = Settings.Default.GuideConfiguration;
+            tbxAdditionalArguments.Text = Settings.Default.CommandLineArguments;
             cbxAlwaysInNewInstance.Checked = Settings.Default.AlwaysNewInstance;
         }
 
@@ -26,10 +27,12 @@ namespace OccultWatcher.Guide
         {
             btnOK.Text = m_ParentAddin.GetResourceString("OK", "OK");
             btnCancel.Text = m_ParentAddin.GetResourceString("Cancel", "Cancel");
+            btnAbout.Text = m_ParentAddin.GetResourceString("About", "About");
             Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideConfigTitle, "OW Guide Add-in Configuration");
             btnOpenFileDialog.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideBrowse, "Browse ...");
             lblOptional.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideOptional, "Optional: Add name of Guide configuration (exactly 8 characters)");
             lblGuidePath.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideGuidePath, "Set the path to Guide's executable on your computer");
+            lblAdditionalArguments.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideAdditionalCommandLineArguments, "Optional: Additional command line arguments");
             cbxAlwaysInNewInstance.Text = m_ParentAddin.GetResourceString(OWGuide.OWGuideAlwaysInNewInstance, "Open events in a new instance of Guide");
         }
 
@@ -58,6 +61,7 @@ namespace OccultWatcher.Guide
 
             Settings.Default.GuidePath = tbxPathToGuide.Text;
             Settings.Default.GuideConfiguration = tbxGuideConfig.Text;
+            Settings.Default.CommandLineArguments = tbxAdditionalArguments.Text;
             Settings.Default.AlwaysNewInstance = cbxAlwaysInNewInstance.Checked;
             Settings.Default.Save();
 
@@ -81,6 +85,13 @@ namespace OccultWatcher.Guide
                     tbxPathToGuide.AppendText(path);
                 }                
             }
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this, 
+                m_ParentAddin.GetResourceString(OWGuide.OWGuideAddinCredits, "This add-in was created by Andreas Eberle"), 
+                m_ParentAddin.GetResourceString(OWGuide.OWGuideAddinName, "OW Guide Add-in"));
         }
     }
 }
