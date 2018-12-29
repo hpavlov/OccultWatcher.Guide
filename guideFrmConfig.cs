@@ -94,4 +94,4 @@ namespace OccultWatcher.Guide
                 m_ParentAddin.GetResourceString(OWGuide.OWGuideAddinName, "OW Guide Add-in"));
         }
     }
-}
+} 

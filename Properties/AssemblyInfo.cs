@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("OccultWatcher.Guide")]
-[assembly: AssemblyCopyright("Copyright ©  2018 Hristo Pavlov")]
+[assembly: AssemblyCopyright("Copyright ©  2018-2019 Andreas Eberle, Hristo Pavlov")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
