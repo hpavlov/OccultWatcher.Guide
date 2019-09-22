@@ -86,6 +86,7 @@ namespace OccultWatcher.Guide
         {
             m_HostInfo = hostInfo;
             m_ResourceProvider = hostInfo as IOWResourceProvider;
+            GuideConfig.LoadRegistryConfig();
 
             SetLanguage(m_HostInfo.CurrentLanguage);
 
@@ -120,7 +121,7 @@ namespace OccultWatcher.Guide
         bool IOWAddin.ShouldDisplayAction(int actionId, IOWAsteroidEvent astEvent)
         {
             // Our actions will be always displayed if the path to Guide has been configured 
-            return File.Exists(Settings.Default.GuidePath);
+            return File.Exists(GuideConfig.GuidePath);
         }
 
         void IOWAddin.ExecuteAction(
@@ -136,7 +137,7 @@ namespace OccultWatcher.Guide
                     IOWLocalEventData siteData = astEvent as IOWLocalEventData;
                     IOWAsteroidEvent2 evt2 = astEvent as IOWAsteroidEvent2;
 
-                    if (siteData != null && evt2 != null && File.Exists(Settings.Default.GuidePath))
+                    if (siteData != null && evt2 != null && File.Exists(GuideConfig.GuidePath))
                     {
                         DateTime dateAndTime = siteData.EventTime;
 
@@ -161,16 +162,16 @@ namespace OccultWatcher.Guide
                         // Format: -tyyyymmdd hh:mm:ss.ssss -ohhmmss.ssss,dd.ddddd
                         string guideOptions;
 
-                        if (Settings.Default.GuideConfiguration == "")
+                        if (GuideConfig.GuideConfiguration == "")
                         {
-                            guideOptions = string.Concat("-t", date, " -o", coord, " " + Settings.Default.CommandLineArguments);
+                            guideOptions = string.Concat("-t", date, " -o", coord, " " + GuideConfig.CommandLineArguments);
                         }
                         else
                         {
-                            guideOptions = string.Concat("-m", Settings.Default.GuideConfiguration, ".mar ", "-t", date, " -o", coord, " " + Settings.Default.CommandLineArguments);
+                            guideOptions = string.Concat("-m", GuideConfig.GuideConfiguration, ".mar ", "-t", date, " -o", coord, " " + GuideConfig.CommandLineArguments);
                         }
 
-                        if (!Settings.Default.AlwaysNewInstance)
+                        if (!GuideConfig.AlwaysNewInstance)
                         {
                             if (m_CurrentGuideProcess != null &&
                                 !m_CurrentGuideProcess.HasExited)
@@ -188,8 +189,8 @@ namespace OccultWatcher.Guide
 
                         ProcessStartInfo startInfo = new ProcessStartInfo();
                         startInfo.UseShellExecute = false;
-                        startInfo.WorkingDirectory = Path.GetDirectoryName(Settings.Default.GuidePath);
-                        startInfo.FileName = Settings.Default.GuidePath;
+                        startInfo.WorkingDirectory = Path.GetDirectoryName(GuideConfig.GuidePath);
+                        startInfo.FileName = GuideConfig.GuidePath;
                         startInfo.Verb = "runas";
                         startInfo.Arguments = guideOptions;
                         startInfo.ErrorDialog = true;

@@ -16,10 +16,11 @@ namespace OccultWatcher.Guide
            
             InitializeComponent();
 
-            tbxPathToGuide.Text = Settings.Default.GuidePath;
-            tbxGuideConfig.Text = Settings.Default.GuideConfiguration;
-            tbxAdditionalArguments.Text = Settings.Default.CommandLineArguments;
-            cbxAlwaysInNewInstance.Checked = Settings.Default.AlwaysNewInstance;
+            GuideConfig.LoadRegistryConfig();
+            tbxPathToGuide.Text = GuideConfig.GuidePath;
+            tbxGuideConfig.Text = GuideConfig.GuideConfiguration;
+            tbxAdditionalArguments.Text = GuideConfig.CommandLineArguments;
+            cbxAlwaysInNewInstance.Checked = GuideConfig.AlwaysNewInstance;
         }
 
 
@@ -59,11 +60,11 @@ namespace OccultWatcher.Guide
                 return;
             }
 
-            Settings.Default.GuidePath = tbxPathToGuide.Text;
-            Settings.Default.GuideConfiguration = tbxGuideConfig.Text;
-            Settings.Default.CommandLineArguments = tbxAdditionalArguments.Text;
-            Settings.Default.AlwaysNewInstance = cbxAlwaysInNewInstance.Checked;
-            Settings.Default.Save();
+            GuideConfig.GuidePath = tbxPathToGuide.Text;
+            GuideConfig.GuideConfiguration = tbxGuideConfig.Text;
+            GuideConfig.CommandLineArguments = tbxAdditionalArguments.Text;
+            GuideConfig.AlwaysNewInstance = cbxAlwaysInNewInstance.Checked;
+            GuideConfig.SaveRegistryConfig();
 
             Close();
         }

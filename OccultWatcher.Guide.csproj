@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AstroConvert.cs" />
+    <Compile Include="GuideConfig.cs" />
     <Compile Include="guideFrmConfig.cs">
       <SubType>Form</SubType>
     </Compile>
